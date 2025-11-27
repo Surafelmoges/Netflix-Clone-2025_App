@@ -1,3 +1,68 @@
-h1{
-    color: rgb(7, 141, 74);
+.footer_outer_container{
+    background-color: #141414;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+.footer_inner_container { 
+    width: 100%;
+    max-width: 1000px;
+}
+.footer_icons{
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    color: white;
+    cursor: pointer;
+}
+.footer_data ul{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Creates 4 equal columns */
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+}
+.footer_data ul li{
+    font-size: 14px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+.footer_data ul li:hover{
+    color: white;
+}
+.service_code{
+    margin: 20px 0;
+    font-size: 12px;
+
+}
+.service_code p{
+    border: 1px solid gray;
+    padding: 5px 10px;
+    display: inline-block;  /* wraps the border around the text only */
+    cursor: pointer;
+
+}
+.service_code p:hover {
+    color: white;
+    border-color: white;
+}
+.copy-write {
+    font-size: 11px;
+    margin-bottom: 20px;
+}
+strong {
+    font-weight: bold;
+    color: rgb(240, 64, 64);
+}
+
+/* --- RESPONSIVE (Mobile) --- */
+
+
+
+/* If screen is small, switch to 2 columns instead of 4 */
+@media (max-width: 768px) {
+    .footer_data ul {
+        grid-template-columns: repeat(2, 1fr); 
+    }
 }

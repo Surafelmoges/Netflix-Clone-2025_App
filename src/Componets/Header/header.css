@@ -1,0 +1,59 @@
+.headerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    position: sticky; /* or fixed */
+    top: 0;
+    z-index: 100;
+    background-color: #141414;
+    height: 64px;
+}
+
+/* --- SHARED STYLES --- */
+.header-left ul,
+.header-right ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+}
+
+/* --- LEFT SIDE (Navigation) --- */
+.header-left ul li {
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.3s; /* Smooth hover effect */
+}
+
+/* Hover effect for text */
+.header-left ul li:not(.logo):hover {
+    color: #b3b3b3; 
+}
+
+/* --- LOGO FIX --- */
+/* This handles the "Medium Size" requirement */
+.logo img {
+    width: 100px;        /* Adjust this pixel value to your preference */
+    object-fit: contain; /* Prevents the image from stretching/squashing */
+    cursor: pointer;
+    padding-top: 5px;    /* Center visual alignment if needed */
+}
+
+/* --- RIGHT SIDE (Icons) --- */
+/* This handles the "Not Visible" requirement */
+.header-right ul li {
+    color: white;       /* Forces the Icons to be white */
+    cursor: pointer;
+    display: flex;      /* Helps center the icon inside the li */
+    align-items: center;
+}
+
+/* Optional: Make icons slightly gray on hover */
+.header-right ul li:hover {
+    color: #b3b3b3;
+}
